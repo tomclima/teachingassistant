@@ -29,4 +29,11 @@ Feature: Envio bem-sucedido de roteiro corrigido
 		And: Vejo que o roteiro não está indicado como "Já enviado"
 		And: Vejo que a minha correção não enviada está salva
 
-
+	Scenario: Correção parcial, mas não enviada, salva no sistema
+		Given: Estou logado como professor
+		And: Estou na página de correção do roteiro "Gerência de Configuração" do aluno "Carlos Lima"
+		And: Marquei que as questões 1, 2, 3 e 4 foram respondidas corretamente, mas não marco nada para a questão 4
+		When: Eu saio do site
+		And: Eu volto para a página de correção do roteiro "Gerência de Configuração" do aluno "Carlos Lima"
+		Then: Ainda estou na página de correção do roteiro "Gerência de Configurações" do aluno "Carlos Lima"
+		And: vejo que a minha correção não enviada está salva com as questões 1, 2, 3 e 4 marcadas como certas, mas nada para a questão 4

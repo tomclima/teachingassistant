@@ -31,3 +31,11 @@ And altero o título para “Roteiro 1” e clico em “Salvar”
 Then o sistema exibe mensagem de erro indicando que já existe um roteiro com esse título
 And continuo na tela de “Edição de Roteiros” com os dados preenchidos
 And ajuste solicitado
+
+Cenário 5:
+Given estou na tela de “Listagem de Roteiros”
+And existe um roteiro chamado “Roteiro 1”
+When clico em “Remover” no roteiro “Roteiro 1”
+And confirmo a remoção
+Then o sistema exibe mensagem de sucesso
+And o roteiro “Roteiro 1” não aparece mais na listagem de roteiros fix

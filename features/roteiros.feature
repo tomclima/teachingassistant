@@ -21,3 +21,11 @@ And altero o título para “Roteiro 1 - Atualizado” e clico em “Salvar”
 Then o sistema exibe mensagem de sucesso
 And continuo na tela de “Listagem de Roteiros”
 And visualizo o roteiro com o título atualizado
+
+Cenário 4:
+Given estou na tela de “Listagem de Roteiros”
+And existe um roteiro chamado “Roteiro 1” e outro chamado “Roteiro 2”
+When clico em “Editar” no roteiro “Roteiro 2”
+And altero o título para “Roteiro 1” e clico em “Salvar”
+Then o sistema exibe mensagem de erro indicando que já existe um roteiro com esse título
+And continuo na tela de “Edição de Roteiros” com os dados preenchidos

@@ -12,3 +12,4 @@ And não preenchi os campos obrigatórios
 When clico em “Salvar”
 Then o sistema exibe mensagem de erro indicando os campos obrigatórios ausentes
 And continuo na tela de “Cadastro de Roteiros” com os dados parciais preenchidos
+Then stakeholders pediram outra coisa

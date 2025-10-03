@@ -12,3 +12,12 @@ And não preenchi os campos obrigatórios
 When clico em “Salvar”
 Then o sistema exibe mensagem de erro indicando os campos obrigatórios ausentes
 And continuo na tela de “Cadastro de Roteiros” com os dados parciais preenchidos
+
+Cenário 3:
+Given estou na tela de “Listagem de Roteiros”
+And existe um roteiro cadastrado chamado “Roteiro 1”
+When clico em “Editar” no roteiro “Roteiro 1”
+And altero o título para “Roteiro 1 - Atualizado” e clico em “Salvar”
+Then o sistema exibe mensagem de sucesso
+And continuo na tela de “Listagem de Roteiros”
+And visualizo o roteiro com o título atualizado

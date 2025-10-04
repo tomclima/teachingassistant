@@ -1,4 +1,4 @@
-Feature: Envio bem-sucedido de roteiro corrigido 
+Feature: Correção de roteiro 
 	Scenario: Correção bem sucedida de Roteiros
 		Given: Estou logado como professor
 		And: Estou na página de correção do roteiro "Gerência de Configuração" do aluno "Carlos Lima"

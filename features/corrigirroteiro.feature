@@ -28,5 +28,6 @@ Feature: Envio bem-sucedido de roteiro corrigido
 		And: Vejo que uma mensagem de erro indicando erro interno do sistema e que a correção não foi enviada
 		And: Vejo que o roteiro não está indicado como "Já enviado"
 		And: Vejo que a minha correção não enviada está salva
+		And: Vejo o roteiro "Gerência de Configuração" do aluno "Carlos Lima" marcado com as questões 1, 2, 3 e 4 como respondidas corretamente
 
 

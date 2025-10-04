@@ -37,3 +37,13 @@ Feature: Envio bem-sucedido de roteiro corrigido
 		And: Eu volto para a página de correção do roteiro "Gerência de Configuração" do aluno "Carlos Lima"
 		Then: Ainda estou na página de correção do roteiro "Gerência de Configurações" do aluno "Carlos Lima"
 		And: vejo que a minha correção não enviada está salva com as questões 1, 2, 3 e 4 marcadas como certas, mas nada para a questão 4
+	
+	Scenario: alerta ao clicar na opção de limpar correção
+		Given: Estou logado como professor
+		And: Estou na página de correção do roteiro "Gerência de Configuração" do aluno "Carlos Lima"
+		And: Marquei que as questões 1, 2, 3 e 4 foram respondidas corretamente, mas não marco nada para a questão 4
+		When: Eu escolho a opção de limpar a correção atual
+		Then: Ainda estou na página de correção do roteiro "Gerência de Configurações" do aluno "Carlos Lima"
+		And: Vejo um aviso "Tem certeza que deseja limpar correção? Essa ação não pode ser desfeita"
+	
+	

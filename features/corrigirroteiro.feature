@@ -73,3 +73,12 @@ Feature: Correção de roteiro
 		When: Escolho a opção de limpar
 		Then: Ainda estou na página de correção do roteiro "Gerência de Configurações" do aluno "Carlos Lima"
 		And: Vejo que, para as questões 1, 2, 3, e 4, não há nada marcado
+	
+	Scenario: Não escolher como plagiada após alerta
+		Given: Estou logado como professor
+		And: Estou na página de correção do roteito "Gerência de Configuração" do aluno "Carlos Lima"
+		And: Eu estou vendo o aviso "Tem certeza que deseja marcar questão como plágio?" para a questão 1
+		When: Eu escolho a opção de não marcar como plágio
+		Then: Ainda estou na página de correção do roteiro "Gerência de Configurações" do aluno "Carlos Lima"
+		And: A questão 1 não está marcada como tendo sido plagiada
+	

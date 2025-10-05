@@ -64,3 +64,12 @@ Feature: Correção de roteiro
 		Then: Ainda estou na página de correção do roteiro "Gerência de Configurações" do aluno "Carlos Lima"
 		And: Vejo um aviso "Tem certeza que deseja marcar questão como plágio?"
 		
+	Scenario: Escolha de limpar correção após alerta
+		Given: Estou logado como professor
+		And: Estou na página de correção do roteiro "Gerência de Configuração" do aluno "Carlos Lima"
+		And: Marquei que as questões 1, 2 e 3 foram respondidas corretamente, mas não marco nada para a questão 4
+		And: Eu escolho a opção de limpar a correção atual
+		And: Vejo um aviso "Tem certeza que deseja limpar correção? Essa ação não pode ser desfeita"
+		When: Escolho a opção de limpar
+		Then: Ainda estou na página de correção do roteiro "Gerência de Configurações" do aluno "Carlos Lima"
+		And: Vejo que, para as questões 1, 2, 3, e 4, não há nada marcado

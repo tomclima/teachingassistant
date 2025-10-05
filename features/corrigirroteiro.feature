@@ -57,3 +57,10 @@ Feature: Correção de roteiro
 		Then: Ainda estou na página de correção do roteiro "Gerência de Configurações" do aluno "Carlos Lima"
 		And: Vejo que a minha correção está salva com as questões 1, 2 e 3 marcadas como certas, mas nada para a questão 4
 
+	Scenario: Alerta ao escolher marcar questão como plagiada
+		Given: Estou logado como professor
+		And: Estou na página de correção do roteito "Gerência de Configuração" do aluno "Carlos Lima"
+		When: Eu marco a resposta de Carlos para a questão 1 como tendo sido plagiada
+		Then: Ainda estou na página de correção do roteiro "Gerência de Configurações" do aluno "Carlos Lima"
+		And: Vejo um aviso "Tem certeza que deseja marcar questão como plágio?"
+		

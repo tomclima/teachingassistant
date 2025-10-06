@@ -19,5 +19,4 @@ Scenario:Falha na edição de roteiro por título já existente
     When clico em “Editar” no roteiro “Roteiro 2”
     And altero o título para “Roteiro 1” e clico em “Salvar”
     Then o sistema exibe mensagem de erro indicando que já existe um roteiro com esse título
-    And continuo na tela de “Edição de Roteiros” com os dados preenchidos"		
-    and teste														
+    And continuo na tela de “Edição de Roteiros” com os dados preenchidos"																

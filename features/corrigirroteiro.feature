@@ -72,4 +72,4 @@ Feature: Correção de roteiro
 		And: Vejo um aviso "Tem certeza que deseja limpar correção? Essa ação não pode ser desfeita"
 		When: Escolho a opção de limpar
 		Then: Ainda estou na página de correção do roteiro "Gerência de Configurações" do aluno "Carlos Lima"
-		And: Vejo que, para as questões 1, 2, 3, e 4, não há nada marcado
+		And: Vejo que, para as questões 1, 2, 3, e 4 não há nada marcado

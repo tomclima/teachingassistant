@@ -7,7 +7,8 @@ import { AlunoService } from './aluno.service';
   @Component({
    selector: 'metas',
    templateUrl: './metas.component.html',
-   styleUrls: ['./metas.component.css']
+   styleUrls: ['./metas.component.css'],
+   standalone: false
  })
  export class MetasComponent implements OnInit {
     constructor(private alunoService: AlunoService) {}

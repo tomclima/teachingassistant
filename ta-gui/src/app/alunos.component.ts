@@ -5,9 +5,10 @@ import { Component, OnInit } from '@angular/core';
  import { AlunoService } from './aluno.service';
 
   @Component({
-   selector: 'app-root',
+   selector: 'app-alunos',
    templateUrl: './alunos.component.html',
-   styleUrls: ['./alunos.component.css']
+   styleUrls: ['./alunos.component.css'],
+   standalone: false
  })
  export class AlunosComponent implements OnInit {
     constructor(private alunoService: AlunoService) {}

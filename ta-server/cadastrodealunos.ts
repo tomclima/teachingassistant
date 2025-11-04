@@ -18,6 +18,7 @@ export class CadastroDeAlunos {
    }
 
     atualizar(aluno: Aluno): Aluno {
+
      var result: Aluno = this.alunos.find(a => a.cpf == aluno.cpf);
      if (result) result.copyFrom(aluno);
      return result;
